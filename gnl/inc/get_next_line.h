@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivbatist <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 00:09:14 by ivbatist          #+#    #+#             */
-/*   Updated: 2022/12/03 00:09:28 by ivbatist         ###   ########.fr       */
+/*   Created: 2022/12/03 00:08:45 by ivbatist          #+#    #+#             */
+/*   Updated: 2024/10/08 23:11:08 by pin3dev          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef GET_NEXT_LINE_BONUS_H
-# define GET_NEXT_LINE_BONUS_H
+
+# ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
 # ifndef OPEN_MAX
 #  define OPEN_MAX 4096
 # endif
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 4000
+#  define BUFFER_SIZE 42
 # endif
 
 # include <unistd.h>
-# include <stdlib.h>
 # include <stdio.h>
+# include <stdlib.h>
+# include "../../../42_Libft/libft/inc/libft.h"
 
 char	*get_next_line(int fd);
-char	*ft_read(int fd, char *str);
-size_t	ft_strlen(const char *c);
-char	*ft_strchr(const char *s, int c);
-char	*ft_free_join(char *s, char *buffer);
-char	*ft_get_line(char *s);
-char	*ft_new_line(char *s);
+char    *fullData_storage(int fd, char *fullData);
+char    *next_line_mining(char *fullData);
+char    *trim_FullData(char *fullData, int i);
 
 #endif
