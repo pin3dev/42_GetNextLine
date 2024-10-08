@@ -6,7 +6,7 @@
 #    By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 22:49:22 by pin3dev           #+#    #+#              #
-#    Updated: 2024/10/09 00:19:12 by pin3dev          ###   ########.fr        #
+#    Updated: 2024/10/09 00:34:19 by pin3dev          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ TEST_EXEC = testergnl
 ################################################################################
 
 CC = gcc
-CFLAGS = -fsanitize=address -g -Wall -Wextra -Werror -I inc
+CFLAGS = -Wall -Wextra -Werror -I inc
 RM = rm -f
 RMD = rm -rf
 
@@ -63,6 +63,7 @@ fclean: clean
 	@$(RM) $(NAME) 
 	@$(RM) $(TEST_EXEC) 
 	@$(MAKE) -C $(LIBFT_DIR) fclean
+	@$(RMD) ../../42_Libft/
 	@echo "$(NAME) removed"
 
 re: fclean all
@@ -85,7 +86,7 @@ $(OBJDIR):
 	@mkdir -p $(OBJDIR)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 	@echo "Compiled $< into $@"
 
 $(NAME): $(OBJS)
