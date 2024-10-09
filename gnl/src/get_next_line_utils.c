@@ -29,7 +29,7 @@ char *fullData_storage(int fd, char *fullData)
 	{
         bytes_read = read(fd, buffer, BUFFER_SIZE);
         if (bytes_read == -1)
-        	return(free(fullData), fullData = NULL, NULL);
+		return(free(fullData), fullData = NULL, NULL);
 	if (bytes_read == 0 && *fullData == '\0')
 		return(free(fullData), fullData = NULL, NULL);
         if (bytes_read == 0)
