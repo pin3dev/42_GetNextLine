@@ -26,7 +26,7 @@ char *fullData_storage(int fd, char *fullData)
     }
     
     while (!ft_strchr(fullData, '\n'))
-	{
+    {
         bytes_read = read(fd, buffer, BUFFER_SIZE);
         if (bytes_read == -1)
 	{
