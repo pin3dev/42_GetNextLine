@@ -57,7 +57,7 @@ char *next_line_mining(char *fullData)
     int len = 0;
     char *line;
 
-    while (fullData[len] && fullData[len] != '\n') //incluir no libft
+    while (fullData[len] && fullData[len] != '\n')
         len++;
     if (fullData[len] == '\n')
         len++;
