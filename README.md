@@ -33,17 +33,7 @@ The main challenge of the project is to ensure that the function handles both la
 
 ## 🧬 Project Structure <a id="structure"></a>
 
-The project consists of a single function:
-
-- **get_next_line**: Reads from a file descriptor and returns a line, one at a time, with each call.
-
-To implement this, the project requires careful use of static variables, buffer management, and handling edge cases such as reading from multiple file descriptors at the same time.
-
-### Key Concepts:
-- **File Descriptors**: Handles used to refer to files or input/output streams.
-- **Static Variables**: Persistent variables that retain their value between function calls.
-- **Buffers**: Temporary storage areas to manage data read from the file descriptor.
-- **Memory Management**: Ensuring there are no memory leaks by correctly allocating and freeing memory.
+The function relies on a few key concepts. **File descriptors** are used to reference files or input/output streams, while **static variables** are necessary to maintain values between function calls. **Buffers** are used to temporarily store data read from the file descriptor, ensuring smooth data flow. Proper **memory management** is also essential to avoid memory leaks by ensuring memory is allocated and freed correctly.  
 
 ## 🗃️ Documentation <a id="docs"></a>
 
@@ -128,7 +118,7 @@ This project adheres ***partially*** to the strict coding guidelines of the [**4
 
 ## 📖 Theoretical Background <a id="theoretical"></a>
 
-All theoretical resources and materials used to complete this project, including documentation on file descriptors, memory management, and static variables, can be found through the link below:
+All the theoretical material used to develop this project is organized and can be accessed directly via the link below:  
 
 <p align="center"> 
   <a href="https://github.com/pin3dev/42_Cursus/tree/main/get_next_line/#00-Get_Next_Line">
