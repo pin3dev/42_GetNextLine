@@ -124,7 +124,7 @@ int main()
 
 ## ⚠️ Norms and Guidelines Disclaimer <a id="norms"></a>
 
-This project adheres to the strict coding guidelines of the [**42 School Norm**](https://github.com/pin3dev/42_Cursus/blob/b9cd0fe844ddb441d0b3efb98abcee92aee49535/assets/General/norme.en.pdf). This includes coding restrictions like a maximum number of functions per file, limited lines per function, and other stylistic rules which may impact implementation decisions.
+This project adheres ***partially*** to the strict coding guidelines of the [**42 School Norm**](https://github.com/pin3dev/42_Cursus/blob/b9cd0fe844ddb441d0b3efb98abcee92aee49535/assets/General/norme.en.pdf). This includes coding restrictions like a maximum number of functions per file, limited lines per function, and other stylistic rules which may impact implementation decisions.
 
 ## 📖 Theoretical Background <a id="theoretical"></a>
 
