@@ -49,8 +49,8 @@ For detailed documentation on the **get_next_line** function, including example 
 To clone this repository and compile the project, run the following commands:
 
 ```bash
-git clone https://github.com/pin3dev/42_Get_Next_Line.git
-cd 42_Get_Next_Line
+git clone https://github.com/pin3dev/42_GetNextLine.git
+cd 42_GetNextLine
 ```
 This will download the project from GitHub to your local machine. Once inside the directory, you can compile the project with the provided Makefile.
 
