@@ -8,7 +8,6 @@
     <img src="https://img.shields.io/badge/File_IO-blue?style=for-the-badge"/>
     <img src="https://img.shields.io/badge/Memory_Management-blue?style=for-the-badge"/>
     <img src="https://img.shields.io/badge/Static_Variables-blue?style=for-the-badge"/>
-    <img src="https://img.shields.io/badge/Linked_Lists-blue?style=for-the-badge"/>
     <img src="https://img.shields.io/badge/Makefile-blue?style=for-the-badge"/>
   </a>
 </p>
