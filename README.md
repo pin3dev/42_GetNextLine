@@ -8,7 +8,6 @@
     <img src="https://img.shields.io/badge/File_IO-blue?style=for-the-badge"/>
     <img src="https://img.shields.io/badge/Memory_Management-blue?style=for-the-badge"/>
     <img src="https://img.shields.io/badge/Static_Variables-blue?style=for-the-badge"/>
-    <img src="https://img.shields.io/badge/Makefile-blue?style=for-the-badge"/>
   </a>
 </p>
 
@@ -85,21 +84,12 @@ To use the **get_next_line** function in your program:
     gcc -Wall -Wextra -Werror my_program.c get_next_line/get_next_line.c get_next_line/get_next_line_utils.c -o my_program
     ```
 
-3. You can now call `get_next_line()` to read a file line by line.
-<!--
-### Example
-
-Here is an example of how to use `get_next_line()`:
-
-```c
-#include "get_next_line.h"
-#include <fcntl.h>
-
-int main()
-{
+3. You can now call `get_next_line` to read a file line by line.
+   
+    ```c
     int fd = open("file.txt", O_RDONLY);
     char *line;
-
+  
     while ((line = get_next_line(fd)) != NULL)
     {
         printf("%s\n", line);
@@ -107,9 +97,7 @@ int main()
     }
     close(fd);
     return 0;
-}
-```
--->
+    ```
 
 ## ⚠️ Norms and Guidelines Disclaimer <a id="norms"></a>
 
