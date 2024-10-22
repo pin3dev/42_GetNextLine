@@ -76,12 +76,12 @@ To use the **get_next_line** function in your program:
 
 1. Include the header file in your code:
     ```c
-    #include "get_next_line.h"
+    #include "42_GetNextLine/gnl/inc/get_next_line.h"
     ```
 
 2. Compile your code along with the **get_next_line** files:
     ```bash
-    gcc -Wall -Wextra -Werror my_program.c get_next_line/get_next_line.c get_next_line/get_next_line_utils.c -o my_program
+    cc -Wall -Wextra -Werror -o your_exec test.c -L 42_GetNextLine/gnl/ -lgnl -L 42_Libft/libft/ -lft
     ```
 
 3. You can now call `get_next_line` to read a file line by line.
