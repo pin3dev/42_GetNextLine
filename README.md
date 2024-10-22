@@ -4,7 +4,7 @@
 </p>
 
 <p align="center"> 
-  <a href="https://github.com/pin3dev/42_Cursus/tree/main/get_next_line/#00-Get_Next_Line">
+  <a href="https://github.com/pin3dev/42_Cursus/tree/main/library/#00-Get_Next_Line">
     <img src="https://img.shields.io/badge/File_IO-blue?style=for-the-badge"/>
     <img src="https://img.shields.io/badge/Memory_Management-blue?style=for-the-badge"/>
     <img src="https://img.shields.io/badge/Static_Variables-blue?style=for-the-badge"/>
