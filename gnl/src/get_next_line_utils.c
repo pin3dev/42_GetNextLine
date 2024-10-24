@@ -6,12 +6,12 @@
 /*   By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 22:02:26 by pin3dev           #+#    #+#             */
-/*   Updated: 2024/10/09 00:04:41 by pin3dev          ###   ########.fr       */
+/*   Updated: 2024/10/24 22:44:54 by pin3dev          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "../inc/get_next_line.h"
+#include "get_next_line.h"
 
 char *fullData_storage(int fd, char *fullData)
 {

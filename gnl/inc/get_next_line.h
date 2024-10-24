@@ -6,7 +6,7 @@
 /*   By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 00:08:45 by ivbatist          #+#    #+#             */
-/*   Updated: 2024/10/08 23:11:08 by pin3dev          ###   ########.fr       */
+/*   Updated: 2024/10/24 22:45:11 by pin3dev          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
-# include "../../../42_Libft/libft/inc/libft.h"
+# include "libft.h"
 
 char	*get_next_line(int fd);
 char    *fullData_storage(int fd, char *fullData);

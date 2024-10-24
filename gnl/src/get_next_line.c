@@ -6,11 +6,11 @@
 /*   By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 00:07:50 by ivbatist          #+#    #+#             */
-/*   Updated: 2024/10/08 22:46:09 by pin3dev          ###   ########.fr       */
+/*   Updated: 2024/10/24 22:44:54 by pin3dev          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/get_next_line.h"
+#include "get_next_line.h"
 
 char *get_next_line(int fd) 
 {

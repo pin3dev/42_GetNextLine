@@ -6,19 +6,42 @@
 #    By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 22:49:22 by pin3dev           #+#    #+#              #
-#    Updated: 2024/10/09 00:34:19 by pin3dev          ###   ########.fr        #
+#    Updated: 2024/10/24 22:52:43 by pin3dev          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+################################################################################
+# 									Graphic	 	 							   #
+################################################################################
+
+RED=\033[0;31m
+GREEN=\033[0;32m
+RESET=\033[0m
+BKGRAY=\033[47;90m
+BKGRAYGREEN=\033[1;92m
+BKGRAYRED=\033[1;91m
+
+################################################################################
+# 									Executable	 	 						   #
+################################################################################
+
 NAME = libgnl.a
 TEST_EXEC = testergnl
+
+################################################################################
+# 							Libft Variables 								   #
+################################################################################
+
+LIBFT_DIR = ../../42_Libft/libft 
+LIBFT = $(LIBFT_DIR)/libft.a
+LIBFT_REPO = git@github.com:pin3dev/42_Libft.git
 
 ################################################################################
 # 						Compiler and Flags	Variables						   #
 ################################################################################
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I inc
+CFLAGS = -Wall -Wextra -Werror -I inc -I ../../42_Libft/libft/inc
 RM = rm -f
 RMD = rm -rf
 
@@ -29,14 +52,6 @@ RMD = rm -rf
 SRCDIR = src
 OBJDIR = obj
 TESTDIR = test
-
-################################################################################
-# 							Libft Variables 								   #
-################################################################################
-
-LIBFT_DIR = ../../42_Libft/libft 
-LIBFT = $(LIBFT_DIR)/libft.a
-LIBFT_REPO = git@github.com:pin3dev/42_Libft.git
 
 ################################################################################
 # 							Files	Path	Variables 						   #
@@ -55,23 +70,19 @@ all: $(OBJDIR) $(LIBFT) $(NAME)
 
 clean:
 	@$(RM) $(OBJS)
-	@$(MAKE) -C $(LIBFT_DIR) clean
-	@$(RMD) $(OBJDIR)
-	@echo "Object files removed"
+	@if [ -d "$(OBJDIR)" ]; then $(RMD) $(OBJDIR); fi
+	@echo "${BKGRAY}GNL:${BKGRAYRED}- Obj${RESET}"
 
 fclean: clean
-	@$(RM) $(NAME) 
-	@$(RM) $(TEST_EXEC) 
-	@$(MAKE) -C $(LIBFT_DIR) fclean
-	@$(RMD) ../../42_Libft/
-	@echo "$(NAME) removed"
+	@$(RM) $(NAME)
+	@if [ -f "$(TEST_EXEC)" ]; then $(RM) $(TEST_EXEC); fi
+	@echo "${BKGRAY}GNL: ${BKGRAYRED}- Exec${RESET}"
 
 re: fclean all
 
 ################################################################################
 # 							Test Target 		 							   #
 ################################################################################
-
 
 test: all
 	@$(CC) $(CFLAGS) -o $(TEST_EXEC) $(TESTDIR)/test.c -L. -lgnl -L$(LIBFT_DIR) -lft
@@ -87,17 +98,17 @@ $(OBJDIR):
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
-	@echo "Compiled $< into $@"
 
 $(NAME): $(OBJS)
-	@ar rcs $(NAME) $(OBJS)
-	@echo "Library $(NAME) created"
+	@ar rcs $(NAME) $(OBJS) & \
+	./gui_load.sh "GNL" 
+	@wait
 
 $(LIBFT):
-	@if [ ! -d $(LIBFT_DIR) ]; then \
-		echo "Cloning libft from pin3dev repo..."; \
-		git clone $(LIBFT_REPO) ../../42_Libft; \
+	@if [ ! -d ../../42_Libft ]; then \
+		git clone $(LIBFT_REPO) ../../42_Libft > /dev/null 2>&1; \
 	fi
+	@printf "${BKGRAY}Libft:${RESET} "; 
 	@$(MAKE) -C $(LIBFT_DIR)
 
 ################################################################################
