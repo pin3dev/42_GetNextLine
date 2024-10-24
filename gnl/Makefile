@@ -6,7 +6,7 @@
 #    By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 22:49:22 by pin3dev           #+#    #+#              #
-#    Updated: 2024/10/25 00:11:08 by pin3dev          ###   ########.fr        #
+#    Updated: 2024/10/25 00:27:46 by pin3dev          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ BKGRAYGREEN=\033[1;92m
 BKGRAYRED=\033[1;91m
 
 ################################################################################
-# 									Names	 	 							   #
+# 									Executable	 	 						   #
 ################################################################################
 
 NAME = libgnl.a
@@ -38,7 +38,7 @@ TESTDIR = test
 ################################################################################
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I inc -I ../../42_Libft/libft/inc #$(LIBFT_DIR)/inc
+CFLAGS = -Wall -Wextra -Werror -I inc -I $(LIBFT_DIR)/inc
 RM = rm -f
 RMD = rm -rf
 
@@ -46,7 +46,7 @@ RMD = rm -rf
 # 							Libft Variables 								   #
 ################################################################################
 
-LIBFT_DIR = ../../42_Libft/libft 
+LIBFT_DIR = ../../42_Libft/libft
 LIBFT = $(LIBFT_DIR)/libft.a
 LIBFT_REPO = git@github.com:pin3dev/42_Libft.git
 
